@@ -1,0 +1,305 @@
+@mixin middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+};
+
+
+.AdminContainer {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #faf7f2;
+}
+.AdminContent {
+  flex: 1;
+  margin-top: 150px;
+
+  .admin_input_wrapper {
+    width: 300px;
+    height: 100px;
+    margin-bottom: 30px;
+
+    .admin_box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 250px;
+      height: 50px;
+
+      .admin_content_text {
+        width: 30%;
+      }
+      .admin_content_input {
+        width: 70%;
+        height: 40px;
+        font-size: 15px;
+        font-weight: normal;
+        min-height: 40px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #E9E9E9;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+  .login_button {
+    width: 100px;
+    height: 30px;
+  }
+
+  .amdin_Main_Box {
+    width: 200px;
+    height: 50px;
+    @include middle();
+    border: 1px solid #BDBDBD;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }  
+  .amdin_Main_Box:hover {
+    cursor: pointer;
+    border: 1px solid #333;
+  }
+}
+
+
+
+.admin-register {
+  width: 80%;
+  @include middle;
+
+  > .inner {
+    width: 100%;
+    margin-top: 30px;
+    @include middle;
+    padding-bottom: 100px;
+    flex-direction: column;
+    
+    
+    .inputbox {
+      width: 100%;
+      min-height: 50px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      
+      .name {
+        width: 150px;
+        font-size: 18px;
+        @include middle;
+      }
+      > input,
+      > .input {
+        width: 90%;
+        min-height: 40px;
+        padding: 4px 5px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        border-radius: 5px;
+        color: #777;
+        font-size: 15px;
+        font-weight: 300;
+      }
+      textarea {
+        width: 90%;
+        resize: none;
+      }
+      
+
+      // DateBox
+      .calendarbox {
+        position: relative;
+        min-height: 40px; 
+        display: flex; 
+        align-items: center;
+        z-index: 9;
+
+        .calendar_dateinput {
+          font-size: 15px;
+          font-weight: normal;
+          width: 100%;
+          height: 35px;
+          text-align: left;
+          border: 1px solid #E9E9E9;
+          border-radius: 5px;
+          padding-left: 10px;
+        }
+
+        .dateinput {
+          font-size: 15px;
+          font-weight: normal;
+          width: 100%;
+          height: 35px;
+          text-align: left;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          padding-left: 10px;
+        }
+        .calender-icon {
+          position: absolute;
+          pointer-events: none; 
+        }
+      }
+
+      .facultyBox {
+       width: 100%;
+
+        .faculty-input-row {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 5px;
+
+          > input,
+          > .input {
+            min-height: 40px;
+            padding: 4px 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+            color: #777;
+            font-size: 15px;
+            font-weight: 300;
+          }
+          .faculty-input-row-btn {
+            width: 8%;
+            height: 38px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+            @include middle();
+          }
+          .faculty-input-subrowBox {
+        
+            .faculty-input-subrow {
+              display: flex;
+              margin-bottom: 5px;
+  
+              > input {
+                min-height: 40px;
+                padding: 4px 5px;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+                border-radius: 5px;
+                color: #777;
+                font-size: 15px;
+                font-weight: 300;
+              }
+              .faculty-input-subrow-btn {
+                width: 7%;
+                height: 38px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                background-color: #dcdcdc;
+                color: #333;
+                @include middle();
+                font-size: 14px;
+              }
+            }
+          }
+          
+        }
+      }
+      
+    }
+    .admin-textRow {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ccc;
+      height: 50px;
+    }
+    .admin-textRow:hover {
+      cursor: pointer;
+      border-bottom: 1px solid #333;
+    }
+    
+    .imageInputBox {
+      width: 100%;
+      min-height: 200px;
+
+      .imageDropzoneCover {
+        width: 100%;  
+        @include middle();
+        
+        .imageDropzoneStyle {
+          width: 150px;
+          height: 30px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 4px;
+          border: 2px dashed #BDBDBD;
+          cursor: pointer;
+          margin: 20px 0;
+    
+          div.imageplus {
+            font-size: 14px;
+            color: #333;
+          }
+        };
+      }
+      
+      .imagebox {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+
+        img {
+          width: 50px;
+          height: 50px;
+        }
+        p {
+          margin: 0 10px;
+        }
+        div {
+          @include middle();
+        }
+      }
+      
+    }
+    
+    .buttonbox {
+      width: 400px;
+      height: 50px;
+      left: 0;
+      right: 0;
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+
+      .button {
+        width: 150px;
+        height: 40px;
+        background-color: #333;
+        border-radius: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+        @include middle;
+
+        p {
+          font-weight: 700;
+          font-size: 16px;
+        }
+      }
+      .button:hover {
+        background-color: #8C8C8C;
+        cursor: pointer;
+      }
+    }
+
+   
+  }
+
+}
+

@@ -1,0 +1,539 @@
+@mixin middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+};
+
+
+// ---------------------------------
+.registerImageBox {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  
+  .divider {
+    width: 1px;
+    background-color: #8C8C8C;;
+  }
+  .register {
+    @include middle;
+    position: relative;
+
+    .backBtn {
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      width: 20px;
+      height: 20px;
+      border: 1px solid #8C8C8C;
+      border-radius: 5px;
+      @include middle;
+    }
+    .backBtn:hover {
+      cursor: pointer;
+      background-color: #BDBDBD;
+    }
+  }
+  .name {
+
+
+
+  }
+  
+// register.content -----------------------------------      
+
+  .register-content {
+    width: 100%;
+    flex-direction: column;
+    padding-top: 10px;
+    
+    .register-inputbox {
+      width: 100%;
+      min-height: 50px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    
+      .register-name {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        .register-name-icon {
+          width: 20%;
+        }
+        .register-name-text {
+          width: 60%;
+        }
+      }
+      .register-input {
+        width: 70%;
+        input {
+          width: 100%;
+          height: 50px;
+          padding: 4px 10px;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+          border-radius: 5px;
+          color: #777;
+          font-size: 20px;
+          background-color: #fff;
+        }
+        
+      }
+      > input::placeholder {
+        font-size: 14px;
+        color: #BDBDBD;
+      }
+      .selectInput {
+        display: flex;
+        justify-content: space-between;
+
+        .sortSelectBox {
+          width: 33%;
+          height: 100%;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+          border-radius: 5px;
+          @include middle;
+        }
+        .sortSelectBox.selected {
+          border: 2px solid #777;
+        }
+        .sortSelectBox:hover {
+          border: 1px solid #777;
+          cursor: pointer;
+        }
+      }
+      // datepicker 커스텀 ---------------------
+      .react-datepicker__month-container {
+        width: 300px;
+        font-size: 14px;
+
+        .react-datepicker__header {
+          .react-datepicker__day-names{
+            display: flex;
+            padding: 0px 12px;
+            justify-content: space-between;
+          }
+        }
+        .react-datepicker__month {
+          .react-datepicker__week {
+            display: flex;
+            padding: 5px;
+            justify-content: space-between;
+            .react-datepicker__day--outside-month{
+              color: #BDBDBD;
+            }
+          }
+        }
+      }
+      
+      // --------------------------------------------------
+      .plus-minus-button{
+        width: 50px;
+        height: 50px;
+        @include middle;
+       
+        p {
+          width: 30px;
+          height: 30px;
+          font-size: 24px;
+          @include middle;
+          border: 1px solid #8C8C8C;
+          border-radius: 5px;
+        }
+        p:hover {
+          background-color: #8C8C8C;
+        }
+      }
+      .autoComplete {
+        width: 610px;
+        position: absolute;
+        right: 0;
+        top: 50px;
+        background-color: #FFF;
+        border: 1px solid #8C8C8C;
+        z-index: 9;
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .dropDownList {
+          height: 30px;
+          display: flex;
+          align-items: center;
+        }
+        .dropDownList.selected{
+          width: 100%;
+          background-color: #EAEAEA;
+        }
+      }
+      .magnifyIcon {
+        position: absolute;
+        right: 15px;
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        border: 1px solid #EAEAEA;
+        border-radius: 5px;
+        p {
+          margin-right: 5px;
+        }
+      }
+      .magnifyIcon:hover {
+        cursor: pointer;
+        opacity: 0.8;
+        background-color: #BDBDBD;
+      }
+      .DaumPostBox {
+        position: absolute;
+        width: 610px;
+        top: 0px;
+        right: 0px;
+        z-index: 9;
+        background-color: #FFF;
+        border: 1px solid #8C8C8C;
+      }
+    }
+
+    .inputbox.white {
+      background-color: #fff;
+    }
+    .selectButton {
+      display: flex;
+      margin: 5px;
+
+      .selectButton-btn {
+        width: 100px;
+        height: 50px;
+        background-color: #EAEAEA;
+        margin-left: 10px;
+        margin-right: 10px;
+        @include middle;
+      }
+      .selectButton-btn.seleted {
+        border: 2px solid #8C8C8C;
+      }
+    }
+    
+  }
+
+// register.poster ----------------------------------------
+  .register.select {
+    width: 1100px;
+    height: 700px;
+    flex-direction: column;
+
+    .noticeArea {
+      width: 100%;
+      height: 20%;
+      @include middle;
+    }
+    .selectArea {
+      width: 100%;
+      height: 80%;
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+
+      .selectboxCover {
+        width: 33%;
+        @include middle;
+
+        .selectbox {
+          width: 300px;
+          height: 200px;
+          border: 1px solid #8C8C8C;
+          border-radius: 5px;
+          @include middle;
+          flex-direction: column;
+        }
+        .selectbox:hover {
+          cursor: pointer;
+          background-color: #EAEAEA;
+        }
+      }
+    }
+  }
+
+  .register.poster {
+    width: 600px;
+    height: 700px;
+    @include middle;
+    position: relative;
+
+    .noticeText {
+      position: absolute;
+      top: 15px;
+    }
+
+    .imageControlBtn-default {
+      position: absolute;
+      left: 75px;
+      bottom: 10px;
+      width: 100px;
+      height: 30px;
+      border: 1px solid red;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-right: 10px;
+      @include middle;
+    }
+    .imageControlBtn-default:hover {
+      background-color: #EAEAEA;
+      cursor: pointer;
+    }
+    
+    .imageContainer {
+      position: relative;
+      @include middle;
+
+      .imageBox {
+  
+        .imageDropzoneStyle {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border-radius: 4px;
+          border: 2px dashed #BDBDBD;
+          cursor: pointer;
+    
+          div.imageplus {
+            font-size: 30px;
+            color: #333;
+          }
+          
+        };
+      };
+      .cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        z-index: 9;
+
+        .style1 {
+          @include middle;
+          position: absolute;
+          color: #fff;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          
+          &.part-name {
+            .part {
+              text-align: start;
+            }
+            .nameEn {
+              text-align: center;
+            }
+            .recital {
+              text-align: end;
+            }
+          }
+        }
+        .style2 {
+          @include middle;
+          position: absolute;
+          color: #fff;
+          left: 20px;
+          
+        }
+        .style3 {
+          @include middle;
+          position: absolute;
+          color: #fff;
+          right: 20px;
+          
+          &.part-name {
+            .part {
+              text-align: end;
+            }
+            .nameEn {
+              text-align: end;
+            }
+            .recital {
+              text-align: end;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .register.control {
+    width: 500px;
+    height: 700px;
+    flex-direction: column;
+    position: relative;
+   
+    .cover {
+      height: 600px;
+      box-sizing: border-box;
+      padding: 10px;
+      
+      .box {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+        .imageControlBtn {
+          width: 120px;
+          height: 30px;
+          border: 1px solid red;
+          border-radius: 5px;
+          font-size: 16px;
+           margin-top: 10px;
+          @include middle;
+        }
+        .imageControlBtn:hover {
+          background-color: #EAEAEA;
+          cursor: pointer;
+        }
+
+        .selectStyleBtn {
+          width: 20px;
+          padding: 5px;
+          border: 1px solid #BDBDBD;
+          border-radius: 5px;
+          margin-right: 5px;
+          @include middle;
+        }
+        .selectStyleBtn:hover {
+          background-color: #BDBDBD;
+          cursor: pointer;
+        }
+        
+        .selectWidthBtn {
+          width: 100px;
+          padding: 5px;
+          border: 1px solid #BDBDBD;
+          border-radius: 5px;
+          margin-right: 5px;
+          @include middle;
+
+          p {
+            width: 30px;
+            border: 1px solid #BDBDBD;
+            border-radius: 5px;
+            margin-left: 3px;
+            @include middle;
+          }
+          p:hover {
+            background-color: #BDBDBD;
+            cursor: pointer;
+          }
+        }
+        .selectColorBtn {
+          width: 100px;
+          padding: 5px;
+          border: 1px solid #BDBDBD;
+          border-radius: 5px;
+          margin-right: 10px;
+          @include middle;
+        }
+        .selectColorBtn:hover {
+          background-color: #BDBDBD;
+          cursor: pointer;
+        }
+        .selectColorBox {
+          position: absolute;
+        }
+
+        
+      }
+      .flex {
+        display: flex;
+        .selectWidthBtn {
+          height: 30px;
+        }
+      }
+      .part-name {
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        font-size: 12px;
+        .nameEn {
+          font-family: cursive;
+        }
+      }
+      .date-place {
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+
+        .date-place-cover {
+          font-size: 12px;
+          display: flex;
+          height: 20px;
+        }
+        .place {
+          font-size: 12px;
+        }
+      }
+      .supporter-ticket {
+        align-items: start;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 10px;
+
+        .supporter-ticket-cover {
+          display: flex;
+          font-size: 10px;  
+          height: 16px;
+          .ticketReserve{
+            margin: 0 5px;
+          }
+        }
+      }
+
+    }
+    .cover.content{
+      width: 220px;
+    }
+    .cover.control {
+      width: 280px;
+    }
+
+  }
+  
+}
+
+// buttonbox ----------------------------------------
+
+.buttonbox {
+  width: 400px;
+  height: 50px;
+  left: 0;
+  right: 0;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+
+  .button {
+    width: 150px;
+    height: 40px;
+    background-color: #EAEAEA;
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+    @include middle;
+
+    p {
+      font-weight: 700;
+    }
+  }
+  .button:hover {
+    background-color: #8C8C8C;
+    cursor: pointer;
+  }
+}

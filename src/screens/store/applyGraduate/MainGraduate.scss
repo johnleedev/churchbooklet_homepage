@@ -1,0 +1,310 @@
+@mixin middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+};
+
+.info-inputbox {
+
+  .graduate-register-backBtnBox {
+    width: 100%;
+    margin-bottom: 20px;
+
+    .graduate-register-backBtn {
+      width: 120px;
+      height: 40px;
+      border: 1px solid #BDBDBD;
+      border-radius: 5px;
+      @include middle();
+      padding: 5px 10px;
+      box-sizing: border-box;
+      p {
+        margin-left: 10px;
+        font-size: 16px;
+      }
+    }
+    .graduate-register-backBtn:hover {
+      cursor: pointer;
+      border: 1px solid #909090;
+    }
+  }
+
+  .graduate-register-inputCover {
+    background-color: #f6f5e9;
+    padding: 20px;
+    box-sizing: border-box;
+
+    .graduate-register-inputbox {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    
+      .graduate-register-name {
+        width: 25%;
+        @include middle();
+        font-weight: 600;
+        font-size: 20px;
+        @media (max-width: 700px) { 
+          font-size: 16px;
+          width: 30%;
+        }
+      }
+      .graduate-register-input {
+        width: 70%;
+        
+        input, .input, textarea {
+          width: 100%;
+          height: 50px;
+          padding: 4px 10px;
+          border: 1px solid #ccc;
+          box-sizing: border-box;
+          border-radius: 5px;
+          color: #000000;
+          font-size: 16px;
+          background-color: #fff;
+          outline: none;
+        }
+        input::placeholder {
+          font-size: 14px;
+          color: #b8b8b8;
+        }
+        textarea::placeholder {
+          font-size: 14px;
+          color: #b8b8b8;
+        }
+       .register-input-select {
+          width: 100%;
+          height: 50px;
+        }
+
+        .graduate-register-selectBox {
+          width: 100%;
+          height: 50px;
+          display: flex;
+          justify-content: space-between;
+         
+          .sortSelectBox {
+            width: 25%;
+            height: 100%;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+            @include middle;
+            background-color: #fff;
+            color: #ccc;
+            font-size: 16px;
+          }
+          .sortSelectBox.selected {
+            border: 2px solid #777;
+            color: #333;
+          }
+          .sortSelectBox:hover {
+            border: 1px solid #777;
+            cursor: pointer;
+          }
+        }
+
+        .plus-minus-btn {
+          height: 48px;
+          background-color: #fff;
+          @include middle();
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+        .plus-minus-btn:hover {
+          cursor: pointer;
+          border: 1px solid #929292;
+        }
+      }
+      .graduate-register-inputBtn {
+        
+      }
+    }
+  }
+
+  ul.graduate-registerProgram-StyleSelect {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    
+    .graduate-registerProgram-title {
+      width: 100%;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    li.graduate-registerProgram-styleSelectBox {
+      width: 100%;
+      box-sizing: border-box;
+      min-height: 100px;
+      border-radius : 5px;
+      border: 1px solid #BDBDBD;
+      padding: 15px;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+  
+      .graduate-registerProgram-text {
+        width: 20%;
+        h3 {
+          font-size: 22px;
+          font-weight: 600;
+          @media (max-width: 700px) { 
+            font-size: 16px;
+          }
+        }
+        p {
+          @media (max-width: 700px) { 
+            font-size: 14px;
+          }
+        }
+      }
+      .graduate-registerProgram-sampletext {
+        width: 60%;
+        h3 {
+          font-size: 18px;
+          font-weight: 600;
+          margin-bottom: 10px;
+          color: #a97933;
+          @media (max-width: 700px) { 
+            font-size: 16px;
+          }
+        }
+        h4 {
+          font-size: 18px;
+          font-weight: 600;
+          @media (max-width: 700px) { 
+            font-size: 16px;
+          }
+        }
+        p {
+          font-size: 16px;
+          @media (max-width: 700px) { 
+            font-size: 14px;
+          }
+        }
+      }
+      .graduate-registerProgram-selectBtn {
+        margin-top: 10px;
+        font-size: 16px;
+        width: 80px;
+        height: 40px;
+        @include middle();
+        border-radius:5px;
+        border: 1px solid #EAEAEA;
+        @media (max-width: 700px) { 
+          width: 50px;
+          height: 30px;
+          font-size: 14px;
+        }
+      }
+      .selected {
+        background-color: #333;
+        color: #fff;
+      }
+    }
+    li.graduate-registerProgram-styleSelectBox:hover {
+      cursor: pointer;
+      border: 1px solid #818181;
+    }
+  }
+  
+  .graduate-imageInputBox {
+    width: 100%;
+    min-height: 50px;
+  
+    .graduate-imageDropzoneCover {
+      width: 100%;  
+      @include middle();
+      
+      .graduate-imageDropzoneStyle {
+        width: 150px;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        border: 2px dashed #BDBDBD;
+        cursor: pointer;
+        margin: 20px 0;
+  
+        div.imageplus {
+          font-size: 14px;
+          color: #333;
+        }
+      };
+    }
+    
+    .graduate-imagebox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-size: 16px;
+  
+      img {
+        max-width: 100%;
+        max-height: 400px;
+        margin-bottom: 20px;
+      }
+      p {
+        margin: 0 10px;
+      }
+      div {
+        @include middle();
+      }
+      .updownBtnBox {
+        display: flex;
+        margin-left: 5px;
+        padding-left: 5px;
+  
+        .updownBtnBtn {
+          @include middle();
+          border: 1px solid #e0e0e0;
+          border-radius: 3px;
+  
+          > p {
+            @include middle();
+            margin: 0;
+            padding: 5px 10px;
+          }
+        }
+        .updownBtnBtn:hover {
+          border: 1px solid #c7c7c7;
+          cursor: pointer;
+        }
+      }
+    }
+  
+  }
+}
+
+
+
+
+.buttonbox {
+  width: 100%;
+  height: 50px;
+  margin-top: 50px;
+  @include middle;
+
+  .button {
+    width: 200px;
+    height: 100%;
+    background-color: #33383f;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    @include middle;
+  }
+  .button:hover {
+    opacity: 0.8;
+  }
+}
+
